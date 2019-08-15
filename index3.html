@@ -1,0 +1,333 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <meta http-equiv="content-language" content="en-us">
+    <meta name="author" content="Hari krishna Bikki">
+    <meta name="description" content="Hari krishna Bikki | Mobile &amp; Web | ML &amp; AI | Data Science">
+
+    <title>Hari Krishna Bikki | Experienced Developer | Mobile &amp; Web | ML &amp; AI | Data Science</title>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index3.js"></script>
+    <script>
+        $(function() {
+            $("#datepicker").datepicker({
+                maxDate: new Date,
+                minDate: new Date(1950, 1, 12),
+                dateFormat: 'dd-mm-yy'
+            }).val(); // DD-MM-YYYY - change if required
+
+        });
+
+        $(document).ready(function() {
+
+            $("#contactNumber").change(function() {
+                var a = $("#contactNumber").val();
+                var filter = /^(?:\+?(61))? ?(?:\((?=.*\)))?(0?[2-57-8])\)? ?(\d\d(?:[- ](?=\d{3})|(?!\d\d[- ]?\d[- ]))\d\d[- ]?\d[- ]?\d{3})$/;
+
+                if (filter.test(a)) {
+                    return true;
+                } else {
+                    alert("Invalid Contact Info");
+                }
+            });
+        });
+
+        function validateForm() {
+            var a = $("#contactNumber").val();
+            var filter = /^(?:\+?(61))? ?(?:\((?=.*\)))?(0?[2-57-8])\)? ?(\d\d(?:[- ](?=\d{3})|(?!\d\d[- ]?\d[- ]))\d\d[- ]?\d[- ]?\d{3})$/;
+
+            if (filter.test(a)) {
+                return true;
+            } else {
+                alert("Invalid Contact Info");
+                return false;
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <br>
+        <p id="companyName" class="text-center">Zinq Pty Ltd - Code Test</p>
+        <hr>
+
+        <div class="row">
+            <aside class="col-sm-12">
+
+                <div class="card">
+                    <article class="card-group-item">
+                        <header class="card-header">
+                            <h6 class="title">4.1 ZINQ-ULATE</h6>
+                        </header>
+                        <div class="filter-content">
+                            <div class="card-body">
+                                <form name="myForm" action="index4.html" method="get" onsubmit="return validateForm()" onsubmit="setTimeout(timeOut(), 3000)">
+                                    <div class="slidecontainer">
+                                        <p>We hate jargons, paperwork & really big words in really small print as much as you do. We'll give you the tools to make the right decisions for yourself.</p>
+
+                                        <p>Here is our personal insurance Zinq-ulator, if you want some solid numbers.</p>
+
+                                        <!--  Date of Birth -->
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="form-group col-sm-2">
+                                                    <label for="datepicker" style="font-weight:bold">Your date of birth*</label>
+                                                </div>
+                                                <div class="form-group col-sm-10">
+                                                    <input type="text" name="date" id="datepicker" class="form-control" placeholder="(DD/MM/YYYY)" required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--  Gender Select -->
+
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="form-group col-sm-2">
+                                                    <label for="Name" style="font-weight:bold">Your gender*</label>
+                                                </div>
+                                                <div class="form-group col-sm-2">
+                                                    <input type="radio" name="gender" value="Male" /> Male
+                                                </div>
+                                                <div class="form-group col-sm-2">
+                                                    <input type="radio" name="gender" value="Female" checked="checked" /> Female
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!--  Do you smoke -->
+
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="form-group col-sm-2">
+                                                    <label for="Name" style="font-weight:bold">Do you smoke?*</label>
+                                                </div>
+                                                <div class="form-group col-sm-2">
+                                                    <input type="radio" name="smoke" value="Yes" /> Yes
+                                                </div>
+
+                                                <div class="form-group col-sm-2">
+                                                    <input type="radio" name="smoke" value="No" checked="checked" /> No
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group col-sm-8">
+                                            <p id="smoke">Select <span style="font-weight:bold">YES</span> if you've smoked regularly in the last twelve months</p>
+                                        </div>
+
+
+                                        <!--  Your Income -->
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="form-group col-sm-2">
+                                                    <label for="Name" style="font-weight:bold">Your income?*</label>
+                                                </div>
+                                                <div class="form-group col-sm-3">
+                                                    <input type="radio" name="income" value="Less" checked="checked" /> Less than 75K a year
+                                                </div>
+
+                                                <div class="form-group col-sm-3">
+                                                    <input type="radio" name="income" value="More" /> More than 75K a year
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <!--  Loan Amount -->
+
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="form-group col-sm-2">
+                                                    <label for="Name" style="font-weight:bold">How much cover do you require?*</label>
+                                                </div>
+                                                <div class="form-group col-sm-9">
+                                                    <input type="range" min="250000" max="9999999" value="50" class="slider" id="myRanges" name="loanAmount" class="form-control" oninput="myRangeOutputId.value = myRanges.value + '$'" required>
+                                                </div>
+                                                <div class="form-group col-sm-1">
+                                                    <output name="myRangeOutputName" id="myRangeOutputId">250000$</output>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group col-sm-8">
+                                            <p id="income">Consider funeral expenses, clearing your mortgage and ongoing family expenses when selecting an amount</p>
+                                        </div>
+
+                                        <!--  Gross Income / Spouse -->
+
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="form-group col-sm-2">
+                                                    <label for="Name" style="font-weight:bold">Gross Income*</label>
+                                                </div>
+                                                <div class="form-group col-sm-5">
+                                                    <input type="number" min="0" max="9999999" name="grossIncome" class="form-control" id="grossIncome" placeholder="Gross Income" oninput="(!validity.rangeOverflow||(value=9999999)) && (!validity.rangeUnderflow||(value=0)) && (!validity.stepMismatch||(value=parseInt(this.value)));" required>
+                                                </div>
+                                                <div class="form-group col-sm-2">
+                                                    <label for="Name" style="font-weight:bold">Spouse*</label>
+                                                </div>
+                                                <div class="form-group col-sm-2">
+                                                    <input type="radio" name="spouse" value="Yes" /> Yes
+                                                </div>
+                                                <div class="form-group col-sm-1">
+                                                    <input type="radio" name="spouse" value="No" checked="checked" /> No
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--  Dependants/ Age youngest dependant -->
+
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="form-group col-sm-2">
+                                                    <label for="Name" style="font-weight:bold">Dependants*</label>
+                                                </div>
+                                                <div class="form-group col-sm-5">
+                                                    <input type="number" min="0" max="9" class="form-control" id="dependants" placeholder="Dependants" name="dependants" oninput="(!validity.rangeOverflow||(value=9)) && (!validity.rangeUnderflow||(value=0)) && (!validity.stepMismatch||(value=parseInt(this.value)));" required>
+                                                </div>
+
+                                                <div class="form-group col-sm-2">
+                                                    <label for="Name" style="font-weight:bold">Age of youngest Dependant*</label>
+                                                </div>
+
+                                                <div class="form-group col-sm-3">
+                                                    <input type="number" class="form-control" id="ageOfDep" placeholder="Age" name="ageOfDep" oninput="(!validity.rangeOverflow||(value=25)) && (!validity.rangeUnderflow||(value=0)) && (!validity.stepMismatch||(value=parseInt(this.value)));" required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--  Total Liablilites and Assets -->
+
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="form-group col-sm-2">
+                                                    <label for="Name" style="font-weight:bold">Total Assets*</label>
+                                                </div>
+                                                <div class="form-group col-sm-5">
+                                                    <input type="number" class="form-control" id="assets" placeholder="Total Assets $" name="assets" oninput="(!validity.rangeOverflow||(value=9999999)) && (!validity.rangeUnderflow||(value=0)) && (!validity.stepMismatch||(value=parseInt(this.value)));" required>
+                                                </div>
+
+                                                <div class="form-group col-sm-2">
+                                                    <label for="Name" style="font-weight:bold">Total Liabilities*</label>
+                                                </div>
+
+                                                <div class="form-group col-sm-3">
+                                                    <input type="number" class="form-control" id="liabilities" placeholder="Total Liabilities $" name="liabilities" oninput="(!validity.rangeOverflow||(value=9999999)) && (!validity.rangeUnderflow||(value=0)) && (!validity.stepMismatch||(value=parseInt(this.value)));" required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--  First Name -->
+
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="form-group col-sm-2">
+                                                    <label for="Name" style="font-weight:bold">Your Name*</label>
+                                                </div>
+                                                <div class="form-group col-sm-5">
+                                                    <input type="text" class="form-control" id="firstName" placeholder="First Name" name="firstName" required>
+                                                </div>
+
+                                                <div class="form-group col-sm-5">
+                                                    <input type="text" class="form-control" id="LastName" placeholder="Last Name" name="lastName" required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!--  Contact Number-->
+
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="form-group col-sm-2">
+                                                    <label for="Contact" style="font-weight:bold">Contact number*</label>
+                                                </div>
+                                                <div class="form-group col-sm-10">
+                                                    <input type="text" name="contact" class="form-control" id="contactNumber" placeholder="Mobile or landline, with area code" required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--  Email Address-->
+
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="form-group col-sm-2">
+                                                    <label for="Contact" style="font-weight:bold">Email Address*</label>
+                                                </div>
+                                                <div class="form-group col-sm-10">
+                                                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter a valid email address" required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--  Your state -->
+
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="form-group col-sm-2">
+                                                    <label for="Name" style="font-weight:bold">Your state*</label>
+                                                </div>
+                                                <div class="form-group col-sm-1">
+                                                    <input type="radio" name="state" value="ACT" checked="checked" /> ACT
+                                                </div>
+
+                                                <div class="form-group col-sm-1">
+                                                    <input type="radio" name="state" value="NSW" /> NSW
+                                                </div>
+                                                <div class="form-group col-sm-1">
+                                                    <input type="radio" name="state" value="NT" /> NT
+                                                </div>
+                                                <div class="form-group col-sm-1">
+                                                    <input type="radio" name="state" value="QLD" /> QLD
+                                                </div>
+                                                <div class="form-group col-sm-1">
+                                                    <input type="radio" name="state" value="SA" /> SA
+                                                </div>
+                                                <div class="form-group col-sm-1">
+                                                    <input type="radio" name="state" value="TAS" /> TAS
+                                                </div>
+                                                <div class="form-group col-sm-1">
+                                                    <input type="radio" name="state" value="VIC" /> VIC
+                                                </div>
+                                                <div class="form-group col-sm-1">
+                                                    <input type="radio" name="state" value="WA" /> WA
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="button button2" id="getQuote" type="submit" onclick="createItems()">GET QUOTE</button>
+                                        <p id="indicate">*Indicates fields that must be filled in</p>
+                                    </div>
+                                </form>
+                                <div id="message" style="display: none">Loading...</div>
+                            </div> <!-- card-body.// -->
+                        </div>
+                    </article> <!-- card-group-item.// -->
+                </div> <!-- card.// -->
+            </aside> <!-- col.// -->
+            <div id=nextButtons>
+                <a href="index2.html" class="previous">&laquo; Previous</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
